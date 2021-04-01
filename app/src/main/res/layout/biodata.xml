@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BiodataActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Biodata"
+        android:fontFamily="@font/lawnmower"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FF0202"
+        android:layout_below="@+id/title"
+        android:id="@+id/about_box">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama : "
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="start|top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Muhammad Taufiq Alif Rahman"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="end|top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TTL :"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="start|center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Makassar, 01 Oktober 2001"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="end|center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asal Sekolah :"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="start|bottom"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMK Darul Arqam Makassar"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="end|bottom"/>
+
+
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_box"
+        android:id="@+id/backBtn"
+        android:layout_marginRight="10dp"
+        app:iconGravity="textStart"
+        app:icon="@drawable/ic_baseline_arrow_back_24"
+        android:onClick="toBack"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/backBtn"
+        android:layout_below="@id/about_box"
+        android:id="@+id/quit"
+        app:iconGravity="textStart"
+        app:icon="@drawable/ic_baseline_power_settings_new_24"
+        android:onClick="toQuit"/>
+
+
+
+
+</RelativeLayout>
